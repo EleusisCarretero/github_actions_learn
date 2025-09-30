@@ -11,10 +11,8 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: true
-      - name: Build ${{env.ARTIFACTS_NAME}} for ubuntu-latest
-        run: go build ${{env.ARTIFACTS_NAME}}.go
       - name: Upload artifactory for linux
-        uses: astertom/nexus-upload-artifact@v1.1.0
+        uses: astertom/upload-artifact@v2
         with:
-          name: linux
-          path: ./${{env.ARTIFACTS_NAME}}
+          name: ${{env.ARTIFACTS_NAME}}
+          path: .
