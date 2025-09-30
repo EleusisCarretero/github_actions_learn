@@ -1,4 +1,4 @@
-name: Executing multiple jobs
+name: Executing multiple jobss
 on: [push]
 jobs:
   artifacts:
