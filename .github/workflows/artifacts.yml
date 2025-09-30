@@ -14,7 +14,7 @@ jobs:
       - name: Build ${{env.ARTIFACTS_NAME}} for ubuntu-latest
         run: go build ${{env.ARTIFACTS_NAME}}.go
       - name: Upload artifactory for linux
-        uses: actions/upload-artifact@v1.1.0
+        uses: astertom/nexus-upload-artifact@v1.1.0
         with:
           name: linux
           path: ./${{env.ARTIFACTS_NAME}}
