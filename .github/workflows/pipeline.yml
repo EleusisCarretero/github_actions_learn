@@ -16,8 +16,9 @@ jobs:
          with:
            python-version: '3.10'
       - name: Run script
-        run: python hello.py
+        run: python hellop.py
   Build:
+    needs: [Test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
