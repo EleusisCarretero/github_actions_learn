@@ -1,1 +1,2 @@
-# BUILD status badged: ![](https://github.com/EleusisCarretero/github_actions_learn/blob/pipeline/.github/workflows/pipeline/badge.svg)
+# BUILD status badged: [![Build](https://github.com/EleusisCarretero/github_actions_learn/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/EleusisCarretero/github_actions_learn/actions/workflows/main.yml)
+
