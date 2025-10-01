@@ -7,7 +7,7 @@ jobs:
       - name: Checkout (opcional si necesitas el código del repo consumidor)
         uses: actions/checkout@v4
       - name: Execute GET via custom action
-        uses: EleusisCarretero/custom-action@v1.0
+        uses: EleusisCarretero/custom-action@v1.1
         with:
           host: "https://api.ejemplo.com"
           endpoint: 'https://petstore.swagger.io/v2/pet/findByStatus'
