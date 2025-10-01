@@ -1,7 +1,7 @@
 name: Pipeline
 on: [push]
 env:
-  ARTIFACTORY_NAME: arti
+  ARTIFACTS_NAME: Artifactory
 jobs:
   Test:
     runs-on: ubuntu-latest
@@ -26,7 +26,7 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: true
-      - name: Create artifactory &{{env.ARTIFACTORY_NAME}}
+      - name: Create artifactory &{{env.ARTIFACTS_NAME}}
         uses: actions/upload-artifact@v4
         with:
           name: ${{env.ARTIFACTS_NAME}}
