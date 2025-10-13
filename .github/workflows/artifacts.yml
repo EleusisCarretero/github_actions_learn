@@ -26,4 +26,4 @@ jobs:
           path: code-coverage-report
       - run: ls -a
       - run: ls -a
-        working-directory: code-coverge-report
+        working-directory: code-coverage-report
