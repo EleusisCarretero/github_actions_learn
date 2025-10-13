@@ -17,6 +17,8 @@ jobs:
           cat /etc/os-release
       - name: Log Env
         run: echo $API_URL
+      - name: Create File
+        run: echo "text file" >text_file.txt
       - name: Container in a steps
         uses: docker://node:18.16-alpine3.17
         with:
@@ -26,3 +28,8 @@ jobs:
         uses: docker://node:18.16-alpine3.17
         with:
           args: -v
+      - name: Read File
+        uses: docker://node:18.16-alpine3.17
+        with:
+          entrypoint: cat
+          args: text_file.txt
