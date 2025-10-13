@@ -1,0 +1,29 @@
+name: Executing multiple jobss
+on: [push]
+env:
+  ARTIFACTS_NAME: Artifactory
+jobs:
+  artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Run Tests
+        run: npm test
+      - name: Upload Code Covergae Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: code-coverage
+          path: coverage
+          retention-days: 2
+      - name: Download code covergae
+        uses: actions/download-artifact@v4
+        with:
+          name: code-coverage
+          path: code-coverage-report
+      - run: ls -a
+      - run: ls -a
+        working-directory: code-coverage-report
