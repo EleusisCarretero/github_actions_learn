@@ -8,8 +8,14 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Upload artifactory for linux
-        uses: actions/upload-artifact@v4
+      - name: Install dependencies
+        run: npm install
+      - name: Run Tests
+        run: npm test
+      - name: Upload Code Covergae Report
+        uses: actions/upload-artifact@v3
+        if: always()
         with:
-          name: ${{env.ARTIFACTS_NAME}}
-          path: .
+          name: code-covergae
+          path: coverage
+          retention-days: 2
