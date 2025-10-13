@@ -19,3 +19,11 @@ jobs:
           name: code-covergae
           path: coverage
           retention-days: 2
+      - name: Download code covergae
+        uses: actions/download-artifact@v4
+        with:
+          name: code-coverga
+          path: code-coverga-report
+      - run: ls -a
+      - run: ls -a
+        working-directory: code-coverge-report
