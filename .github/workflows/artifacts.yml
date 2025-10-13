@@ -13,7 +13,7 @@ jobs:
       - name: Run Tests
         run: npm test
       - name: Upload Code Covergae Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: code-covergae
