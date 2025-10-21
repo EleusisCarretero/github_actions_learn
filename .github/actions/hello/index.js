@@ -1,5 +1,5 @@
-const core = requeire("@actions/core");
-const github = requeire("@actions/github");
+const core = require("@actions/core");
+const github = require("@actions/github");
 
 try{
     core.warning("Warning msg");
