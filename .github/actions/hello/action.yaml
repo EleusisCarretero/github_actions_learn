@@ -3,9 +3,9 @@ author: Eleusis
 description: "Greeting some one and record time"
 inputs:
   who_to_greet:
-  description: "Who to greet"
-  required: true
-  default: "World"
+    description: "Who to greet"
+    required: true
+    default: "World"
 outputs:
   time:
     description: The time of the Greeting
